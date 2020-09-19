@@ -1322,7 +1322,7 @@ namespace refl
                 else return index_of_base<T, N + 1, Ts...>();
             }
 
-            template <template<typename...> typename T, ptrdiff_t N, typename... Ts>
+            template <typename T, ptrdiff_t N, typename... Ts>
             constexpr ptrdiff_t index_of_instance() noexcept
             {
                 if constexpr (sizeof...(Ts) <= N) return -1;
